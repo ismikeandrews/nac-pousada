@@ -1,0 +1,24 @@
+$title-regular: 'Montserrat Regular', 'sans-serif';
+$title-bold: 'Montserrat Bold', 'sans-serif';
+$title-semibold: 'Montserrat SemiBold', 'sans-serif';
+$title-medium: 'Montserrat Medium', 'sans-serif';
+$title-light: 'Montserrat Light', 'sans-serif';
+$font-light: 'Lato Light', 'sans-serif';
+$font-regular: 'Lato Regular', 'sans-serif';
+$font-bold: 'Lato Bold', 'sans-serif';
+
+$white: #fcfffd;
+$black: #04030F;
+$green: #64b6ac;
+
+@mixin MQ($size) {
+    @media screen and (max-width: $size) {
+        @content;
+    }
+}
+
+$XS: 480px;
+$S: 758px;
+$M: 960px;
+$L: 1024px;
+$XL: 1130px;

@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@300;400;500;600;700&display=swap");
+@font-face {
+  font-family: 'Montserrat Regular';
+  src: url(../../assets/fonts/Montserrat/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: 'Montserrat Bold';
+  src: url(../../assets/fonts/Montserrat/Montserrat-Bold.ttf);
+}
+@font-face {
+  font-family: 'Montserrat SemiBold';
+  src: url(../../assets/fonts/Montserrat/Montserrat-SemiBold.ttf);
+}
+@font-face {
+  font-family: 'Montserrat Medium';
+  src: url(../../assets/fonts/Montserrat/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: 'Montserrat Light';
+  src: url(../../assets/fonts/Montserrat/Montserrat-Light.ttf);
+}
+@font-face {
+  font-family: 'Lato Light';
+  src: url(../../assets/fonts/Lato/Lato-Light.ttf);
+}
+@font-face {
+  font-family: 'Lato Regular';
+  src: url(../../assets/fonts/Lato/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: 'Lato Bold';
+  src: url(../../assets/fonts/Lato/Lato-Bold.ttf);
+}
+body {
+  background: #fcfffd;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.title {
+  border-bottom: 1px solid #8a8a8a;
+  font: 30px/35px "Montserrat Regular", "sans-serif";
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.quartos {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.quarto {
+  position: relative;
+  width: 47%;
+}
+.quarto__image-img {
+  border-radius: 20px;
+  height: 280px;
+  margin: 20px 0;
+  width: 100%;
+}
+.quarto__text {
+  color: #04030F;
+  font: 15px/20px "Lato Regular", "sans-serif";
+}
+.quarto__text--title {
+  font: 22px "Montserrat SemiBold", "sans-serif";
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.quarto__btn {
+  border: 3px solid #64b6ac;
+  border-radius: 5px;
+  background: #64b6ac;
+  color: #fcfffd;
+  cursor: pointer;
+  font: 16px "Lato Bold", "sans-serif";
+  margin-top: 10px;
+  padding: 5px 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all .5s ease-in-out;
+  width: 110px;
+}
+.quarto__btn:hover {
+  background: #fcfffd;
+  color: #64b6ac;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -15,15 +15,15 @@ var marko_template = module.exports = require("marko/src/html").t(__filename),
 function render(input, out, __component, component, state) {
   var data = input;
 
-  out.w("<!DOCTYPE html><html><head><meta charset=\"utf-8\"><title>Pousada</title><link rel=\"stylesheet\" href=\"/resource/css/bootstrap.min.css\"><link rel=\"stylesheet\" href=\"/resource/css/all.min.css\"></head><body>");
+  out.w("<!DOCTYPE html><html><head><meta charset=\"utf-8\"><title>Pousada</title><link rel=\"stylesheet\" href=\"css/style.css\"></head><body>");
 
   component_globals_tag({}, out);
 
-  out.w("<main class=\"main-container\"><div class=\"container\"><h1>Pousada</h1></div></main>");
+  out.w("<main class=\"main-container\"><div class=\"container wrapper\"><h1 class=\"title\">Quartos</h1><div class=\"quartos\"><div class=\"quarto\"><div class=\"quarto__image\"><img src=\"assets/images/vip.jpg\" alt=\"Quarto VIP\" title=\"Quarto VIP\" class=\"quarto__image-img\"></div><div class=\"quarto__text--title\">VIP</div><div class=\"quarto__text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut vehicula dui. Vivamus dictum ornare purus, eget mollis dui mollis nec. Fusce lacus turpis, efficitur sit amet nisi eget, tempor hendrerit elit.</div><div class=\"quarto__btn\">Alugar</div></div><div class=\"quarto\"><div class=\"quarto__image\"><img src=\"assets/images/apto.jpg\" alt=\"Apartamento\" title=\"Apartamento\" class=\"quarto__image-img\"></div><div class=\"quarto__text--title\">Apartamento</div><div class=\"quarto__text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut vehicula dui. Vivamus dictum ornare purus, eget mollis dui mollis nec. Fusce lacus turpis, efficitur sit amet nisi eget, tempor hendrerit elit.</div><div class=\"quarto__btn\">Alugar</div></div></div></div></main>");
 
   init_components_tag({}, out);
 
-  await_reorderer_tag({}, out, __component, "10");
+  await_reorderer_tag({}, out, __component, "22");
 
   out.w("</body></html>");
 }
