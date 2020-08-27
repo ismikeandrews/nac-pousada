@@ -2,7 +2,7 @@
 "use strict";
 
 var marko_template = module.exports = require("marko/src/html").t(__filename),
-    marko_componentType = "/nac-pousada$1.0.0/src/views/home.marko",
+    marko_componentType = "/nac-pousada$1.0.0/src/views/quartos.marko",
     components_helpers = require("marko/src/components/helpers"),
     marko_renderer = components_helpers.r,
     marko_defineComponent = components_helpers.c,
@@ -19,11 +19,11 @@ function render(input, out, __component, component, state) {
 
   component_globals_tag({}, out);
 
-  out.w("<main class=\"main-container\"><div class=\"container wrapper\"><h1 class=\"title\">Pousada</h1><p>Sem criatividade no momento, vá para /quartos</p></div></main>");
+  out.w("<main class=\"main-container\"><div class=\"container wrapper\"><h1 class=\"title\">Quartos</h1><div class=\"quartos\"><div class=\"quarto\"><div class=\"quarto__image\"><img src=\"assets/images/vip.jpg\" alt=\"Quarto VIP\" title=\"Quarto VIP\" class=\"quarto__image-img\"></div><div class=\"quarto__text--title\">VIP</div><div class=\"quarto__text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut vehicula dui. Vivamus dictum ornare purus, eget mollis dui mollis nec. Fusce lacus turpis, efficitur sit amet nisi eget, tempor hendrerit elit.</div><div class=\"quarto__btn\">Alugar</div></div><div class=\"quarto\"><div class=\"quarto__image\"><img src=\"assets/images/apto.jpg\" alt=\"Apartamento\" title=\"Apartamento\" class=\"quarto__image-img\"></div><div class=\"quarto__text--title\">Apartamento</div><div class=\"quarto__text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut vehicula dui. Vivamus dictum ornare purus, eget mollis dui mollis nec. Fusce lacus turpis, efficitur sit amet nisi eget, tempor hendrerit elit.</div><div class=\"quarto__btn\">Alugar</div></div></div></div></main>");
 
   init_components_tag({}, out);
 
-  await_reorderer_tag({}, out, __component, "10");
+  await_reorderer_tag({}, out, __component, "22");
 
   out.w("</body></html>");
 }
@@ -36,7 +36,7 @@ marko_template._ = marko_renderer(render, {
 marko_template.Component = marko_defineComponent({}, marko_template._);
 
 marko_template.meta = {
-    id: "/nac-pousada$1.0.0/src/views/home.marko",
+    id: "/nac-pousada$1.0.0/src/views/quartos.marko",
     tags: [
       "marko/src/components/taglib/component-globals-tag",
       "marko/src/components/taglib/init-components-tag",

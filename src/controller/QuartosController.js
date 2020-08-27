@@ -5,5 +5,8 @@ module.exports = {
         // const quartos = await connection('tbQuartos').select('*')
 
         // return response.json(quartos)
+        response.marko(
+            require('../views/quartos.marko')
+        )
     }
 }
