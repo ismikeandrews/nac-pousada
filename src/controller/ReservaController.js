@@ -9,30 +9,24 @@ module.exports = {
     },
 
     async create(request, response) {
-        const {
-            dataEntrada,
-            dataSaida
-        } = request.body;
         try {
-            await connection('tbReserva').insert({
-                dataEntrada,
-                dataSaida
-            })
+            const { dataEntrada, dataSaida } = request.body;
+            await connection('tbReserva').insert({dataEntrada, dataSaida})
             return response.status(200).send({
                 message: 'Salvo com sucesso!'
             })
         } catch (error) {
             console.log(error);
             return response.status(500).send({
-                message: 'ERROR: ' + error
+                message: error
             })
         }
 
     },
 
     async delete(request, response) {
-        const id = request.params.id;
         try {
+            const id = request.params.id;
             await connection('tbReserva').where('codReserva', id).delete()
             response.status(200).send({
                 message: 'Excluido com sucesso.'
@@ -40,20 +34,15 @@ module.exports = {
         } catch (error) {
             console.log(error);
             return response.status(500).send({
-                message: 'ERROR: ' + error
+                message: error
             })
         }
     },
 
     async update(request, response) {
-        const {
-            codReserva,
-            dataEntrada,
-            dataSaida
-        } = request.body;
-
         try {
-            const reserva = await connection('tbReserva').where('codReserva', codReserva).update(dataEntrada, dataSaida)
+            const id = request.params.id
+            const reserva = await connection('tbReserva').where('codReserva', id).update(request.body)
             response.status(200).json(reserva)
         } catch (error) {
             console.log(error);

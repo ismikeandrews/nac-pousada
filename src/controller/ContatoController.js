@@ -8,13 +8,8 @@ module.exports = {
     },
 
     async create(request, response) {
-        const {
-            nomeCompletoContato,
-            emailContato,
-            mensagemContato,
-            dataContato
-        } = request.body;
         try {
+            const { nomeCompletoContato, emailContato, mensagemContato, dataContato } = request.body;
             await connection('tbContato').insert({
                 nomeCompletoContato,
                 emailContato,
@@ -34,9 +29,8 @@ module.exports = {
     },
 
     async delete(request, response) {
-        const id = request.params.id;
-
         try {
+            const id = request.params.id;
             await connection('tbContato').where('codContato', id).delete()
             response.status(200).send({
                 message: 'Excluido com sucesso.'
@@ -44,22 +38,15 @@ module.exports = {
         } catch (error) {
             console.log(error);
             return response.status(500).send({
-                message: 'ERROR: ' + error
+                message: error
             })
         }
     },
 
     async update(request, response) {
-        const {
-            codContato,
-            nomeCompletoContato,
-            emailContato,
-            mensagemContato,
-            dataContato
-        } = request.body;
-
         try {
-            const contato = await connection('tbContato').where('codContato', codContato).update(nomeCompletoContato, emailContato, mensagemContato, dataContato)
+            const id = request.params.id
+            const contato = await connection('tbContato').where('codContato', id).update(request.body)
             response.status(200).json(contato)
         } catch (error) {
             console.log(error);

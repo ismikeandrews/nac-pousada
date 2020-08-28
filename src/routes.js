@@ -22,8 +22,8 @@ routes.post('/quartos/create', QuartoController.create)
 routes.post('/reserva/create', ReservaController.create)
 routes.post('/contato/create', ContatoController.create)
 //PUT
-routes.put('/quarto/update', QuartoController.update)
-routes.put('/reserva/update', ReservaController.update)
-routes.put('/contato/update', ContatoController.update)
+routes.put('/quarto/update/:id', QuartoController.update)
+routes.put('/reserva/update/:id', ReservaController.update)
+routes.put('/contato/update/:id', ContatoController.update)
 
 module.exports = routes;

@@ -8,12 +8,8 @@ module.exports = {
     },
 
     async create(request, response) {
-        const {
-            nomeTipoQuarto,
-            descricaoTipoQuarto,
-            valorDiariaTipoQuarto
-        } = request.body;
         try {
+            const { nomeTipoQuarto, descricaoTipoQuarto, valorDiariaTipoQuarto } = request.body;
             await connection('tbTipoQuarto').insert({
                 nomeTipoQuarto,
                 descricaoTipoQuarto,
@@ -32,9 +28,8 @@ module.exports = {
     },
 
     async delete(request, response) {
-        const id = request.params.id;
-
         try {
+            const id = request.params.id;
             await connection('tbTipoQuarto').where('codTipoQuarto', id).delete()
             response.status(200).send({
                 message: 'Excluido com sucesso.'
@@ -42,21 +37,15 @@ module.exports = {
         } catch (error) {
             console.log(error);
             return response.status(500).send({
-                message: 'ERROR: ' + error
+                message: error
             })
         }
     },
 
     async update(request, response) {
-        const {
-            codTipoQuarto,
-            nomeTipoQuarto,
-            descricaoTipoQuarto,
-            valorDiariaTipoQuarto
-        } = request.body;
-
         try {
-            const tipoQuarto = await connection('tbTipoQuarto').where('codTipoQuarto', codTipoQuarto).update(nomeTipoQuarto, descricaoTipoQuarto, valorDiariaTipoQuarto)
+            const id = request.params.id
+            const tipoQuarto = await connection('tbTipoQuarto').where('codTipoQuarto', id).update(request.body)
             response.status(200).json(tipoQuarto)
         } catch (error) {
             console.log(error);

@@ -8,31 +8,24 @@ module.exports = {
     },
 
     async create(request, response) {
-        const {
-            imagemQuarto,
-            codTipoQuarto
-        } = request.body;
         try {
-            await connection('tbQuarto').insert({
-                imagemQuarto,
-                codTipoQuarto
-            })
+            const { imagemQuarto, codTipoQuarto } = request.body;
+            await connection('tbQuarto').insert({ imagemQuarto, codTipoQuarto})
             return response.status(200).send({
                 message: 'Salvo com sucesso!'
             })
         } catch (error) {
             console.log(error);
             return response.status(500).send({
-                message: 'ERROR: ' + error
+                message: error
             })
         }
 
     },
 
     async delete(request, response) {
-        const id = request.params.id;
-
         try {
+            const id = request.params.id;
             await connection('tbQuarto').where('codQuarto', id).delete()
             response.status(200).send({
                 message: 'Excluido com sucesso.'
@@ -46,14 +39,9 @@ module.exports = {
     },
 
     async update(request, response) {
-        const {
-            codQuarto,
-            imagemQuarto,
-            codTipoQuarto
-        } = request.body;
-
         try {
-            const quarto = await connection('tbQuarto').where('codQuarto', codQuarto).update(imagemQuarto, codTipoQuarto)
+            const id = request.params.id;
+            const quarto = await connection('tbQuarto').where('codQuarto', id).update(request.body)
             response.status(200).json(quarto)
         } catch (error) {
             console.log(error);
