@@ -31,8 +31,7 @@ module.exports = {
     },
 
     async delete(request, response) {
-        const id = request.body.codReserva;
-
+        const id = request.params.id;
         try {
             await connection('tbReserva').where('codReserva', id).delete()
             response.status(200).send({
@@ -59,7 +58,7 @@ module.exports = {
         } catch (error) {
             console.log(error);
             return response.status(500).send({
-                message: 'ERROR: ' + error
+                message: error
             })
         }
     }

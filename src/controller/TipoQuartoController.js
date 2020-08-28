@@ -3,19 +3,21 @@ const connection = require('../database/connection');
 module.exports = {
 
     async index(request, response) {
-        const quartos = await connection('tbQuarto').select('*')
-        return response.status(200).json(quartos);
+        const tipoQuarto = await connection('tbTipoQuarto').select('*')
+        return response.status(200).json(tipoQuarto);
     },
 
     async create(request, response) {
         const {
-            imagemQuarto,
-            codTipoQuarto
+            nomeTipoQuarto,
+            descricaoTipoQuarto,
+            valorDiariaTipoQuarto
         } = request.body;
         try {
-            await connection('tbQuarto').insert({
-                imagemQuarto,
-                codTipoQuarto
+            await connection('tbTipoQuarto').insert({
+                nomeTipoQuarto,
+                descricaoTipoQuarto,
+                valorDiariaTipoQuarto,
             })
             return response.status(200).send({
                 message: 'Salvo com sucesso!'
@@ -23,7 +25,7 @@ module.exports = {
         } catch (error) {
             console.log(error);
             return response.status(500).send({
-                message: 'ERROR: ' + error
+                message: error
             })
         }
 
@@ -33,28 +35,29 @@ module.exports = {
         const id = request.params.id;
 
         try {
-            await connection('tbQuarto').where('codQuarto', id).delete()
+            await connection('tbTipoQuarto').where('codTipoQuarto', id).delete()
             response.status(200).send({
                 message: 'Excluido com sucesso.'
             })
         } catch (error) {
             console.log(error);
             return response.status(500).send({
-                message: error
+                message: 'ERROR: ' + error
             })
         }
     },
 
     async update(request, response) {
         const {
-            codQuarto,
-            imagemQuarto,
-            codTipoQuarto
+            codTipoQuarto,
+            nomeTipoQuarto,
+            descricaoTipoQuarto,
+            valorDiariaTipoQuarto
         } = request.body;
 
         try {
-            const quarto = await connection('tbQuarto').where('codQuarto', codQuarto).update(imagemQuarto, codTipoQuarto)
-            response.status(200).json(quarto)
+            const tipoQuarto = await connection('tbTipoQuarto').where('codTipoQuarto', codTipoQuarto).update(nomeTipoQuarto, descricaoTipoQuarto, valorDiariaTipoQuarto)
+            response.status(200).json(tipoQuarto)
         } catch (error) {
             console.log(error);
             return response.status(500).send({
