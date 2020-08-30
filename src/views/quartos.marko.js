@@ -9,6 +9,9 @@ var marko_template = module.exports = require("marko/src/html").t(__filename),
     marko_helpers = require("marko/src/runtime/html/helpers"),
     marko_loadTag = marko_helpers.t,
     component_globals_tag = marko_loadTag(require("marko/src/components/taglib/component-globals-tag")),
+    marko_forEach = marko_helpers.f,
+    marko_escapeXmlAttr = marko_helpers.xa,
+    marko_escapeXml = marko_helpers.x,
     init_components_tag = marko_loadTag(require("marko/src/components/taglib/init-components-tag")),
     await_reorderer_tag = marko_loadTag(require("marko/src/taglibs/async/await-reorderer-tag"));
 
@@ -19,11 +22,27 @@ function render(input, out, __component, component, state) {
 
   component_globals_tag({}, out);
 
-  out.w("<main class=\"main-container\"><div class=\"container wrapper\"><h1 class=\"title\">Quartos</h1><div class=\"quartos\"><div class=\"quarto\"><div class=\"quarto__image\"><img src=\"assets/images/vip.jpg\" alt=\"Quarto VIP\" title=\"Quarto VIP\" class=\"quarto__image-img\"></div><div class=\"quarto__text--title\">VIP</div><div class=\"quarto__text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut vehicula dui. Vivamus dictum ornare purus, eget mollis dui mollis nec. Fusce lacus turpis, efficitur sit amet nisi eget, tempor hendrerit elit.</div><a href=\"quartos/vip\" class=\"quarto__btn\">Saiba mais</a></div><div class=\"quarto\"><div class=\"quarto__image\"><img src=\"assets/images/apto.jpg\" alt=\"Apartamento\" title=\"Apartamento\" class=\"quarto__image-img\"></div><div class=\"quarto__text--title\">Apartamento</div><div class=\"quarto__text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut vehicula dui. Vivamus dictum ornare purus, eget mollis dui mollis nec. Fusce lacus turpis, efficitur sit amet nisi eget, tempor hendrerit elit.</div><a href=\"quartos/apartamento\" class=\"quarto__btn\">Saiba mais</a></div></div></div></main>");
+  out.w("<main class=\"main-container\"><div class=\"container wrapper\"><h1 class=\"title\">Quartos</h1><div class=\"quartos\">");
+
+  var for__10 = 0;
+
+  marko_forEach(data.tipos, function(tipo) {
+    var keyscope__11 = "[" + ((for__10++) + "]");
+
+    out.w("<div class=\"quarto\"><div class=\"quarto__image\"><img src=\"assets/images/" +
+      marko_escapeXmlAttr(tipo.imagemTipoQuarto) +
+      "\" alt=\"Quarto VIP\" title=\"Quarto VIP\" class=\"quarto__image-img\"></div><div class=\"quarto__text--title\">" +
+      marko_escapeXml(tipo.nomeTipoQuarto) +
+      "</div><div class=\"quarto__text\">" +
+      marko_escapeXml(tipo.descricaoTipoQuarto) +
+      "</div><a href=\"quartos/vip\" class=\"quarto__btn\">RESERVE</a></div>");
+  });
+
+  out.w("</div></div></main>");
 
   init_components_tag({}, out);
 
-  await_reorderer_tag({}, out, __component, "22");
+  await_reorderer_tag({}, out, __component, "18");
 
   out.w("</body></html>");
 }

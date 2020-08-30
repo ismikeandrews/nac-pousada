@@ -4,11 +4,11 @@ module.exports = {
       client: 'mysql',
       connection: {
         // filename: './src/database/db.sqlite'
-        port: "8889",
+        port: "3306",
         host: "127.0.0.1",
         database: "pousada",
         user: "root",
-        password: "root",
+        password: "",
       },
       migrations:{
         directory: './src/database/migrations'
