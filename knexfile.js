@@ -1,9 +1,14 @@
 module.exports = {
 
     development: {
-      client: 'sqlite3',
+      client: 'mysql',
       connection: {
-        filename: './src/database/db.sqlite'
+        // filename: './src/database/db.sqlite'
+        port: "8889",
+        host: "127.0.0.1",
+        database: "pousada",
+        user: "root",
+        password: "root",
       },
       migrations:{
         directory: './src/database/migrations'
