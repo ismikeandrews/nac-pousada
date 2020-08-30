@@ -1,0 +1,58 @@
+const connection = require('../database/connection');
+
+module.exports = {
+
+    async index(request, response) {
+        const contatos = await connection('tbContato').select('*')
+        return response.status(200).json(contatos);
+    },
+
+    async create(request, response) {
+        try {
+            const { nomeCompletoContato, emailContato, mensagemContato, dataContato } = request.body;
+            await connection('tbContato').insert({
+                nomeCompletoContato,
+                emailContato,
+                mensagemContato,
+                dataContato
+            })
+            return response.status(200).send({
+                message: 'Salvo com sucesso!'
+            })
+        } catch (error) {
+            console.log(error);
+            return response.status(500).send({
+                message: error
+            })
+        }
+
+    },
+
+    async delete(request, response) {
+        try {
+            const id = request.params.id;
+            await connection('tbContato').where('codContato', id).delete()
+            response.status(200).send({
+                message: 'Excluido com sucesso.'
+            })
+        } catch (error) {
+            console.log(error);
+            return response.status(500).send({
+                message: error
+            })
+        }
+    },
+
+    async update(request, response) {
+        try {
+            const id = request.params.id
+            const contato = await connection('tbContato').where('codContato', id).update(request.body)
+            response.status(200).json(contato)
+        } catch (error) {
+            console.log(error);
+            return response.status(500).send({
+                message: error
+            })
+        }
+    }
+}
