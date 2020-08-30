@@ -5,6 +5,10 @@ module.exports = {
     async index(request, response) {
         const quartos = await connection('tbQuarto').select('*')
         return response.status(200).json(quartos);
+
+        response.marko(
+             require('../views/quartos.marko')
+          )
     },
 
     async create(request, response) {
