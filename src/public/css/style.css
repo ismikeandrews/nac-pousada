@@ -33,6 +33,8 @@
 }
 body {
   background: #fcfffd;
+  padding: 0;
+  margin: 0;
 }
 
 .wrapper {
@@ -49,6 +51,98 @@ body {
   font: 30px/35px "Montserrat Regular", "sans-serif";
   padding-bottom: 5px;
   text-transform: uppercase;
+}
+
+.text {
+  font: 16px/20px "Lato Regular", "sans-serif";
+}
+
+.menu {
+  align-items: center;
+  background: #64b6ac;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+}
+.menu__img {
+  width: 130px;
+}
+.menu__pages {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.menu__item {
+  margin: 0 30px;
+}
+.menu__link {
+  border-bottom: 2px solid transparent;
+  color: #fcfffd;
+  font: 18px "Montserrat Bold", "sans-serif";
+  outline: none;
+  padding-bottom: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .5s ease-in-out;
+}
+.menu__link:hover {
+  border-bottom: 2px solid #04030F;
+  color: #04030F;
+}
+
+.banner {
+  background-image: url(../assets/images/banner.jpg);
+  background-size: 100%;
+  height: 600px;
+  position: relative;
+}
+.banner__title {
+  background: #0000008c;
+  color: #fcfffd;
+  font: 52px "Montserrat Light", "sans-serif";
+  padding: 5px;
+  position: absolute;
+  top: 15%;
+  right: 70px;
+  transform: translateY(-50%);
+}
+
+.content {
+  margin-top: 50px;
+}
+
+.desc {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 90%;
+}
+.desc__left {
+  width: 55%;
+}
+.desc__map {
+  width: 450px;
+}
+
+.topics {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.topics:last-child {
+  margin-top: 15px;
+}
+.topics__item {
+  align-items: center;
+  display: flex;
+  width: 50%;
+}
+.topics__img {
+  margin-right: 15px;
+  width: 50px;
+}
+.topics__text {
+  font: 18px "Lato Bold", "sans-serif";
 }
 
 .quartos {
@@ -102,10 +196,11 @@ body {
   cursor: pointer;
   font: 16px "Lato Bold", "sans-serif";
   margin-top: 10px;
-  padding: 5px 0;
+  padding: 5px;
   position: absolute;
   right: 0;
   text-align: center;
+  text-decoration: none;
   text-transform: uppercase;
   transition: all .5s ease-in-out;
   width: 110px;

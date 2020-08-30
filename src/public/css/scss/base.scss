@@ -1,5 +1,7 @@
 body { 
     background: $white;
+    padding: 0;
+    margin: 0;
 }
 
 .wrapper {
@@ -16,4 +18,8 @@ body {
     font: 30px/35px $title-regular;
     padding-bottom: 5px;
     text-transform: uppercase;
+}
+
+.text {
+    font: 16px/20px $font-regular;
 }
