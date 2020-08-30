@@ -175,7 +175,7 @@ body {
 }
 .quarto__image-img {
   border-radius: 20px;
-  height: auto;
+  max-height: 350px;
   margin: 20px 0;
   width: 100%;
 }

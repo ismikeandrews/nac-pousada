@@ -3,12 +3,24 @@ const connection = require('../database/connection');
 module.exports = {
 
     async index(request, response) {
-        const quartos = await connection('tbQuarto').select('*')
-        return response.status(200).json(quartos);
+        try {
+            const tipoQuarto = request.params.tipoQuarto;
+            const results    = await connection('tbQuarto')
+                .join('tbTipoQuarto', 'tbQuarto.codTipoQuarto', '=', 'tbTipoQuarto.codTipoQuarto')
+                .where('nomeTipoQuarto', tipoQuarto)
+                .select('tbTipoQuarto.nomeTipoQuarto', 'tbTipoQuarto.descricaoTipoQuarto', 'tbQuarto.codQuarto')
 
-        response.marko(
-             require('../views/quartos.marko')
-          )
+            response.marko(
+                require('../views/quarto.marko'), {
+                    quartos : results
+                }
+            )
+        } catch (error) {
+            console.log(error);
+            return response.status(500).send({
+                message: error
+            })
+        }
     },
 
     async create(request, response) {

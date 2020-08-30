@@ -11,6 +11,7 @@ const TipoQuartoController = require('./controller/TipoQuartoController');
 //GET
 routes.get('/', HomeController.index)
 routes.get('/quartos', TipoQuartoController.index)
+routes.get('/quartos/:tipoQuarto', QuartoController.index)
 routes.get('/reservas', ReservaController.index)
 routes.get('/contatos', ContatoController.index)
 
