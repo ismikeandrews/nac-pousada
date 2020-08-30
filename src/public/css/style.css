@@ -145,6 +145,48 @@ body {
   font: 18px "Lato Bold", "sans-serif";
 }
 
+.footer {
+  align-items: center;
+  background: #333;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  padding: 15px;
+}
+.footer__infos {
+  color: #fcfffd;
+  font: 16px "Lato Bold", "sans-serif";
+}
+.footer__infos p {
+  margin: 10px 0;
+}
+.footer__social-img {
+  margin: 20px;
+}
+
+.grid {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.grid:first-child {
+  margin-top: 20px;
+}
+.grid__item {
+  margin: 5px auto;
+  width: 19%;
+}
+@media screen and (max-width: 1130px) {
+  .grid__item {
+    width: 23%;
+  }
+}
+.grid__img {
+  height: 170px;
+  width: 250px;
+}
+
 .quartos {
   align-items: center;
   display: flex;
