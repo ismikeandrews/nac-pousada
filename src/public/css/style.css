@@ -40,6 +40,10 @@ body {
   width: 90%;
 }
 
+.main-container {
+  padding-top: 20px;
+}
+
 .title {
   border-bottom: 1px solid #8a8a8a;
   font: 30px/35px "Montserrat Regular", "sans-serif";
@@ -51,15 +55,33 @@ body {
   align-items: center;
   display: flex;
   justify-content: space-between;
+  margin: auto;
+  max-width: 1150px;
+}
+@media screen and (max-width: 758px) {
+  .quartos {
+    display: block;
+  }
 }
 
 .quarto {
   position: relative;
   width: 47%;
 }
+@media screen and (max-width: 758px) {
+  .quarto {
+    margin: 0 auto 70px;
+    width: 70%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .quarto {
+    width: 90%;
+  }
+}
 .quarto__image-img {
   border-radius: 20px;
-  height: 280px;
+  height: auto;
   margin: 20px 0;
   width: 100%;
 }

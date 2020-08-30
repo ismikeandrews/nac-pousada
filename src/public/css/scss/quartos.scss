@@ -2,16 +2,31 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
+    margin: auto;
+    max-width: 1150px;
+    
+    @include MQ($S) {
+        display: block;
+    }
 }
 
 .quarto {
     position: relative;
     width: 47%;
 
+    @include MQ($S) {
+        margin: 0 auto 70px;
+        width: 70%;
+    }
+
+    @include MQ($XS) {
+        width: 90%;
+    }
+
     &__image {
         &-img {
             border-radius: 20px;
-            height: 280px;
+            height: auto;
             margin: 20px 0;
             width: 100%;
         }
