@@ -22,7 +22,7 @@ function render(input, out, __component, component, state) {
 
   component_globals_tag({}, out);
 
-  out.w("<main class=\"main-container\"><div class=\"container wrapper\"><h1 class=\"title\">Quartos</h1><div class=\"quartos\">");
+  out.w("<main class=\"main-container\"><div class=\"container wrapper\"><h1 class=\"title\">Quartos</h1><div class=\"tipos-quartos\">");
 
   var for__10 = 0;
 
@@ -31,13 +31,17 @@ function render(input, out, __component, component, state) {
 
     out.w("<div class=\"quarto\"><div class=\"quarto__image\"><img src=\"assets/images/" +
       marko_escapeXmlAttr(tipo.imagemTipoQuarto) +
-      "\" alt=\"Quarto VIP\" title=\"Quarto VIP\" class=\"quarto__image-img\"></div><div class=\"quarto__text--title\">" +
+      "\" alt=\"Quarto " +
+      marko_escapeXmlAttr(tipo.nomeTipoQuarto) +
+      "\" title=\"Quarto " +
+      marko_escapeXmlAttr(tipo.nomeTipoQuarto) +
+      "\" class=\"quarto__image-img\"></div><div class=\"quarto__text--title\">" +
       marko_escapeXml(tipo.nomeTipoQuarto) +
       "</div><div class=\"quarto__text\">" +
       marko_escapeXml(tipo.descricaoTipoQuarto) +
       "</div><a href=\"quartos/" +
       marko_escapeXmlAttr(tipo.nomeTipoQuarto) +
-      "\" class=\"quarto__btn\">RESERVE</a></div>");
+      "\" class=\"quarto__btn\">VEJA OS QUARTOS</a></div>");
   });
 
   out.w("</div></div></main>");
