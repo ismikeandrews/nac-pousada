@@ -187,7 +187,7 @@ body {
   width: 250px;
 }
 
-.quartos {
+.tipos-quartos {
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -195,7 +195,7 @@ body {
   max-width: 1150px;
 }
 @media screen and (max-width: 758px) {
-  .quartos {
+  .tipos-quartos {
     display: block;
   }
 }
@@ -250,6 +250,33 @@ body {
 .quarto__btn:hover {
   background: #fcfffd;
   color: #64b6ac;
+}
+
+.quartos {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 90%;
+}
+
+.quarto {
+  margin-bottom: 45px;
+}
+.quarto__image-img-detalhes {
+  max-height: 200px;
+}
+.quarto__btn_reserve {
+  margin-top: 0;
+}
+.quarto__informacoes {
+  display: flex;
+  justify-content: space-between;
+}
+.quarto__text--diaria {
+  font: 16px "Montserrat SemiBold", "sans-serif";
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=style.css.map */

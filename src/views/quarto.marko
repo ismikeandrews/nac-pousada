@@ -3,16 +3,31 @@
 <head>
     <meta charset='utf-8' />
     <title>Quarto</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
 <main class='main-container'>
     <div class='container wrapper'>
-        <h1 class='title'>Quarto</h1>
+        <h1 class='title'>${data.tipoQuarto.nomeTipoQuarto}</h1>
+        <p class='quarto__text'>
+            ${data.tipoQuarto.descricaoTipoQuarto}.
+            <br> Todos eles custam R$${data.tipoQuarto.valorDiariaTipoQuarto} a diária.
+        </p>
 
         <div class="quartos">
             <div class="quarto" for (quarto in data.quartos)>
-                ${quarto.codQuarto}
+                <div class="quarto__image">
+                    <img src="/assets/images/${data.tipoQuarto.nomeTipoQuarto}s/${quarto.imagemQuarto}" alt="Quarto VIP" title="Quarto VIP" class="quarto__image-img quarto__image-img-detalhes" />
+                </div>
+                <div class="quarto__informacoes">
+                    <div class="quarto__text--title">
+                        QUARTO ${quarto.nomeQuarto}
+                    </div>
+
+                    <a href="reserve/${quarto.codQuarto}" class="quarto__btn quarto__btn_reserve">
+                        RESERVE
+                    </a>
+                </div>
             </div>
         </div>
     </div>

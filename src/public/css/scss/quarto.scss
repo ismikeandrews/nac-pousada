@@ -1,0 +1,32 @@
+.quartos {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 90%;
+}
+
+.quarto {
+  margin-bottom: 45px;
+
+  &__image-img-detalhes {
+    max-height: 200px;
+  }
+
+  &__btn_reserve {
+    margin-top: 0;
+  }
+
+  &__informacoes {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    &--diaria {
+      font: 16px $title-semibold;
+      text-transform: uppercase;
+    }
+  }
+}

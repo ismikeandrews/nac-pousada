@@ -8,13 +8,12 @@
     <body>
         <main class='main-container'>
             <div class='container wrapper'>
-                <!-- layout de quartos pq to sem ideia pra home -->
                 <h1 class='title'>Quartos</h1>
 
-                <div class="quartos">
+                <div class="tipos-quartos">
                     <div class="quarto" for (tipo in data.tipos)>
                         <div class="quarto__image">
-                            <img src="assets/images/${tipo.imagemTipoQuarto}" alt="Quarto VIP" title="Quarto VIP" class="quarto__image-img" />
+                            <img src="assets/images/${tipo.imagemTipoQuarto}" alt="Quarto ${tipo.nomeTipoQuarto}" title="Quarto ${tipo.nomeTipoQuarto}" class="quarto__image-img" />
                         </div>
                         <div class="quarto__text--title">
                             ${tipo.nomeTipoQuarto}
@@ -23,7 +22,7 @@
                             ${tipo.descricaoTipoQuarto}
                         </div>
                         <a href="quartos/${tipo.nomeTipoQuarto}" class="quarto__btn">
-                            RESERVE
+                            VEJA OS QUARTOS
                         </a>
                     </div>
                 </div>

@@ -8,11 +8,16 @@ module.exports = {
             const results    = await connection('tbQuarto')
                 .join('tbTipoQuarto', 'tbQuarto.codTipoQuarto', '=', 'tbTipoQuarto.codTipoQuarto')
                 .where('nomeTipoQuarto', tipoQuarto)
-                .select('tbTipoQuarto.nomeTipoQuarto', 'tbTipoQuarto.descricaoTipoQuarto', 'tbQuarto.codQuarto')
+                .select('*')
 
             response.marko(
                 require('../views/quarto.marko'), {
-                    quartos : results
+                    quartos    : results,
+                    tipoQuarto : {
+                        nomeTipoQuarto        : results[0].nomeTipoQuarto,
+                        descricaoTipoQuarto   : results[0].descricaoTipoQuarto,
+                        valorDiariaTipoQuarto : results[0].valorDiariaTipoQuarto
+                    }
                 }
             )
         } catch (error) {
