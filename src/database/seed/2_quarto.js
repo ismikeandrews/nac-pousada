@@ -21,7 +21,27 @@ exports.seed = function(knex) {
                     imagemQuarto: 'vip4.jpg',
                     codTipoQuarto: 1,
                     nomeQuarto: 'Lua de mel'
-                }
+                },
+                {
+                    imagemQuarto: 'apto1.jpg',
+                    codTipoQuarto: 2,
+                    nomeQuarto: 'Luxuoso duplo'
+                },
+                {
+                    imagemQuarto: 'apto2.jpg',
+                    codTipoQuarto: 2,
+                    nomeQuarto: 'Com deck'
+                },
+                {
+                    imagemQuarto: 'apto3.jpg',
+                    codTipoQuarto: 2,
+                    nomeQuarto: 'Maresia'
+                },
+                {
+                    imagemQuarto: 'apto4.jpg',
+                    codTipoQuarto: 2,
+                    nomeQuarto: 'Luxuoso individual'
+                },
             ])
         })
 }
