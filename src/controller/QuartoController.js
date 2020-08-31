@@ -4,7 +4,10 @@ module.exports = {
 
     async index(request, response) {
         try {
-            const tipoQuarto = request.params.tipoQuarto;
+            const tipoQuarto = request.params.tipoQuarto
+
+            if ( ! ['vip', 'apartamento'].includes(tipoQuarto) ) throw new Error('Tipo inválido')
+
             const results    = await connection('tbQuarto')
                 .join('tbTipoQuarto', 'tbQuarto.codTipoQuarto', '=', 'tbTipoQuarto.codTipoQuarto')
                 .where('nomeTipoQuarto', tipoQuarto)
