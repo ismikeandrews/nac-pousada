@@ -1,10 +1,21 @@
 const connection = require('../database/connection');
 
 module.exports = {
-
     async index(request, response) {
-        const tipoQuarto = await connection('tbTipoQuarto').select('*')
-        return response.status(200).json(tipoQuarto);
+        try {
+            const results = await connection('tbTipoQuarto').select('*')
+            response.marko(
+                require('../views/quartos.marko'),
+                {
+                    tipos : results
+                }
+            )
+        } catch (error) {
+            console.log(error);
+            return response.status(500).send({
+                message: error
+            })
+        }
     },
 
     async create(request, response) {

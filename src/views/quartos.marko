@@ -12,32 +12,18 @@
                 <h1 class='title'>Quartos</h1>
 
                 <div class="quartos">
-                    <div class="quarto">
+                    <div class="quarto" for (tipo in data.tipos)>
                         <div class="quarto__image">
-                            <img src="assets/images/vip.jpg" alt="Quarto VIP" title="Quarto VIP" class="quarto__image-img" />
+                            <img src="assets/images/${tipo.imagemTipoQuarto}" alt="Quarto VIP" title="Quarto VIP" class="quarto__image-img" />
                         </div>
                         <div class="quarto__text--title">
-                            VIP
+                            ${tipo.nomeTipoQuarto}
                         </div>
                         <div class="quarto__text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut vehicula dui. Vivamus dictum ornare purus, eget mollis dui mollis nec. Fusce lacus turpis, efficitur sit amet nisi eget, tempor hendrerit elit.
+                            ${tipo.descricaoTipoQuarto}
                         </div>
-                        <a href="quartos/vip" class="quarto__btn">
-                            Saiba mais
-                        </a>
-                    </div>
-                    <div class="quarto">
-                        <div class="quarto__image">
-                            <img src="assets/images/apto.jpg" alt="Apartamento" title="Apartamento" class="quarto__image-img" />
-                        </div>
-                        <div class="quarto__text--title">
-                            Apartamento
-                        </div>
-                        <div class="quarto__text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut vehicula dui. Vivamus dictum ornare purus, eget mollis dui mollis nec. Fusce lacus turpis, efficitur sit amet nisi eget, tempor hendrerit elit.
-                        </div>
-                        <a href="quartos/apartamento" class="quarto__btn">
-                            Saiba mais
+                        <a href="quartos/${tipo.nomeTipoQuarto}" class="quarto__btn">
+                            RESERVE
                         </a>
                     </div>
                 </div>

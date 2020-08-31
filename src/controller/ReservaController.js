@@ -6,6 +6,10 @@ module.exports = {
     async index(request, response) {
         const reservas = await connection('tbReserva').select('*')
         return response.status(200).json(reservas);
+
+        response.marko(
+            //  require('../views/reserva.marko')
+          )
     },
 
     async create(request, response) {
