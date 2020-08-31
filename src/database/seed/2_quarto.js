@@ -13,12 +13,12 @@ exports.seed = function(knex) {
                     nomeQuarto: 'Verão'
                 },
                 {
-                    imagemQuarto: 'vip3.jpeg',
+                    imagemQuarto: 'vip3.jpg',
                     codTipoQuarto: 1,
                     nomeQuarto: 'De frente pro mar'
                 },
                 {
-                    imagemQuarto: 'vip4.jpeg',
+                    imagemQuarto: 'vip4.jpg',
                     codTipoQuarto: 1,
                     nomeQuarto: 'Lua de mel'
                 }
