@@ -23,7 +23,8 @@
     "knex": "^0.21.5",
     "marko": "^4.13.2",
     "mysql": "^2.18.1",
-    "sqlite3": "^5.0.0"
+    "sqlite3": "^5.0.0",
+    "vanilla-tilt": "^1.7.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"

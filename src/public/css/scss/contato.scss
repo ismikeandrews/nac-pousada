@@ -1,0 +1,194 @@
+/* Temporário */
+*{
+    box-sizing: border-box;
+  }
+  
+  input {
+    outline: none;
+    border: none;
+  }
+  
+  textarea {
+    outline: none;
+    border: none;
+  }
+  
+  button {
+    outline: none !important;
+    border: none;
+    background: transparent;
+  }
+  
+  @media (min-width: 576px) {
+    .container-contato {
+      padding: 90px 15px 88px 15px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  
+    .container-contato {
+      padding: 90px 80px 88px 80px;
+    }
+  
+    .form-contato {
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  
+    .container-contato {
+      padding: 90px 80px 88px 90px;
+    }
+  
+    .form-contato {
+      width: 55%;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  
+    .form-contato {
+      width: 44%;
+    }
+  }
+  
+  .active {
+    border-bottom: 2px solid #04030F;
+    color: #04030F;
+  }
+  
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  
+  .contato {
+    width: 100%;
+    min-height: 100%;
+    padding: 15px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .contato-img{
+    width: 296px;
+  }
+  
+  .contato-img img{
+    max-width: 100%;
+  }
+  
+  .container-contato {
+    width: 1163px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px 130px 88px 148px;
+  }
+  
+  .form-contato {
+    width: 390px;
+  }
+  
+  .form-title {
+    display: block;
+    font: 24px "Montserrat Light", "sans-serif";
+    color: #333333;
+    line-height: 1.2;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  
+  .form-group {
+    width: 100%;
+    z-index: 1;
+  }
+  
+  input.form-input {
+    height: 50px;
+    border-radius: 25px;
+    padding: 0 30px;
+    margin-bottom: 20px;
+  }
+  
+  textarea.form-input {
+    min-height: 150px;
+    border-radius: 25px;
+    padding: 12px 30px;
+  }
+  
+  .form-input {
+    display: block;
+    width: 100%;
+    background: #e6e6e6;
+    font: 15px "Montserrat Bold", "sans-serif";
+    line-height: 1.5;
+    color: #666666;
+  }
+  
+  .form-btn{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .btn {
+    min-width: 193px;
+    height: 50px;
+    border-radius: 25px;
+    background: #64b6ac;
+    font: 15px "Montserrat Bold", "sans-serif";
+    line-height: 1.5;
+    color: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  
+  .btn:hover {
+    background: #333333;
+  }
+  
