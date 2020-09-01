@@ -28,6 +28,9 @@
     .desc__reserva {
         flex-direction: column;
         width: 100%;
+        .topics__text {
+            font-size: 15px
+        }
     }
     hr {
         margin: 20px 0;
@@ -40,8 +43,13 @@
         }
         &__reserva {
             .btn {
-                margin: 0 auto;
+                margin: 0 auto 50px;
             }
+        }
+        &-label {
+            font: 15px "Montserrat Regular";
+            margin: 0 0 10px;
+            display: block;
         }
     }
 }

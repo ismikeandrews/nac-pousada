@@ -271,6 +271,27 @@ body {
       background: #fcfffd;
       color: #64b6ac; }
 
+.quartos {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 90%; }
+
+.quarto {
+  margin-bottom: 45px; }
+  .quarto__image-img-detalhes {
+    max-height: 200px; }
+  .quarto__btn_reserve {
+    margin-top: 0; }
+  .quarto__informacoes {
+    display: flex;
+    justify-content: space-between; }
+  .quarto__text--diaria {
+    font: 16px "Montserrat SemiBold", "sans-serif";
+    text-transform: uppercase; }
+
 /* Temporário */
 * {
   box-sizing: border-box; }
@@ -480,6 +501,8 @@ textarea.form-input {
 .nova__reserva .desc__reserva {
   flex-direction: column;
   width: 100%; }
+  .nova__reserva .desc__reserva .topics__text {
+    font-size: 15px; }
 .nova__reserva hr {
   margin: 20px 0; }
 .nova__reserva .form__title {
@@ -487,6 +510,10 @@ textarea.form-input {
   display: block;
   font: 25px "Montserrat Regular", "sans-serif"; }
 .nova__reserva .form__reserva .btn {
-  margin: 0 auto; }
+  margin: 0 auto 50px; }
+.nova__reserva .form-label {
+  font: 15px "Montserrat Regular";
+  margin: 0 0 10px;
+  display: block; }
 
 /*# sourceMappingURL=style.css.map */

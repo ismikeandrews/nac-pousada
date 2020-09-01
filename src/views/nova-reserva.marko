@@ -39,10 +39,9 @@
 
                 <section.nova__reserva>
                     <div.quarto__reserva>
-                        <img.quarto__image src="/assets/images/vips/vip2.jpg">
+                        <img.quarto__image src="/assets/images/${data.nomeTipoQuarto}s/${data.imagemQuarto}">
                         <div.quarto__reserva--right>
                             <span.quarto__name> 
-                                <!-- ${JSON.stringify(data)} -->
                                 ${data.nomeQuarto}
 
                             </span>
@@ -79,11 +78,14 @@
                     <div.reserva__nova>
                         <div.wrapper>
                             <span.form__title>Preencha o formulário para concluirmos sua reserva.</span>
-                            <form.form__reserva>
+                            <form.form__reserva action="http://localhost:3333/reserva/create" method="POST">
                                 <div.form-group>
-                                    <input.form-input placeholder="Nome">
-                                    <input.form-input placeholder="Data de entrada">
-                                    <input.form-input placeholder="Data de saída">
+                                    <label.form-label for="nomeQuarto">Nome</label>
+                                    <input.form-input id="nomeQuarto" placeholder="Nome">
+                                    <label.form-label for="dataEntrada">Data de Entrada</label>
+                                    <input.form-input id="dataEntrada" type="date" name="dataEntrada" placeholder="Data de entrada">
+                                    <label.form-label for="dataSaida">Data de Saída</label>
+                                    <input.form-input type="date" id="dataSaida" name="dataSaida" placeholder="Data de saída">
                                     <button.btn type="submit">Reservar</button>
                                 </div>
                             </form>

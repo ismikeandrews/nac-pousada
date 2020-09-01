@@ -17,12 +17,15 @@ module.exports = {
     async newReserva(request, response) {
         try {
             const id = request.params.id
-            const quarto = await connection('tbQuarto').select('*').where('codQuarto', id).first()
+            const quarto = await connection('tbQuarto').select('*').where('codQuarto', id)
+                .join('tbTipoQuarto', 'tbQuarto.codTipoQuarto', '=', 'tbTipoQuarto.codTipoQuarto').first()
             console.log(quarto)
             response.marko(
                 require('../views/nova-reserva.marko'), {
                     nomeQuarto: quarto.nomeQuarto,
-                    imagemQuarto: quarto.imagemQuarto
+                    imagemQuarto: quarto.imagemQuarto,
+                    codTipoQuarto: quarto.codTipoQuarto,
+                    nomeTipoQuarto: quarto.nomeTipoQuarto
                 })
         } catch (e) {
             console.error(e)
@@ -34,16 +37,17 @@ module.exports = {
 
     async create(request, response) {
         try {
-            const { dataEntrada, dataSaida } = request.body;
-            await connection('tbReserva').insert({ dataEntrada, dataSaida })
-            return response.status(200).send({
-                message: 'Salvo com sucesso!'
-            })
+            console.log(request.body)
+                // const { dataEntrada, dataSaida } = request.body;
+                // await connection('tbReserva').insert({ dataEntrada, dataSaida })
+                // return response.status(200).send({
+                //     message: 'Salvo com sucesso!'
+                // })
         } catch (error) {
-            console.log(error);
-            return response.status(500).send({
-                message: error
-            })
+            // console.log(error);
+            // return response.status(500).send({
+            //     message: error
+            // })
         }
 
     },
