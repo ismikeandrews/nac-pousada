@@ -15,19 +15,19 @@ module.exports = {
     },
 
     async newReserva(request, response) {
-        console.log('etste')
         try {
             const id = request.params.id
-            const quarto = await connection('tbQuarto').select('*').where('codQuarto', id)
+            const quarto = await connection('tbQuarto').select('*').where('codQuarto', id).first()
+            console.log(quarto)
             response.marko(
-                require('../views/nova-reserva.marko', {
-                    quarto: quarto
+                require('../views/nova-reserva.marko'), {
+                    nomeQuarto: quarto.nomeQuarto,
+                    imagemQuarto: quarto.imagemQuarto
                 })
-            )
         } catch (e) {
             console.error(e)
             return response.status(500).send({
-                message: error
+                message: e
             })
         }
     },

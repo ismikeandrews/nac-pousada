@@ -1,32 +1,33 @@
 {
-  "name": "nac-pousada",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/index.js",
-    "dev": "nodemon src/index.js --ignore *.marko.js",
-    "make:migration": "npx knex migrate:make",
-    "migrate": "npx knex migrate:latest",
-    "migrate:rollback": "npx knex migrate:rollback",
-    "make:seed": "npx knex seed:make",
-    "db:seed": "npx knex seed:run"
-  },
-  "author": "Michael Andrews",
-  "license": "ISC",
-  "dependencies": {
-    "@glidejs/glide": "^3.4.1",
-    "@marko/compile": "^4.1.2",
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "knex": "^0.21.5",
-    "marko": "^4.13.2",
-    "mysql": "^2.18.1",
-    "sqlite3": "^5.0.0",
-    "vanilla-tilt": "^1.7.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.4"
-  }
+    "name": "nac-pousada",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon src/index.js",
+        "dev": "nodemon src/index.js --ignore *.marko.js",
+        "make:migration": "npx knex migrate:make",
+        "migrate": "npx knex migrate:latest",
+        "migrate:rollback": "npx knex migrate:rollback",
+        "make:seed": "npx knex seed:make",
+        "db:seed": "npx knex seed:run",
+        "sass": "sass --watch src/public/css/style.scss:src/public/css/style.css"
+    },
+    "author": "Michael Andrews",
+    "license": "ISC",
+    "dependencies": {
+        "@glidejs/glide": "^3.4.1",
+        "@marko/compile": "^4.1.2",
+        "body-parser": "^1.19.0",
+        "express": "^4.17.1",
+        "knex": "^0.21.5",
+        "marko": "^4.13.2",
+        "mysql": "^2.18.1",
+        "sqlite3": "^5.0.0",
+        "vanilla-tilt": "^1.7.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.4"
+    }
 }

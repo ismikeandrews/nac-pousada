@@ -23,7 +23,7 @@ function render(input, out, __component, component, state) {
   component_globals_tag({}, out);
 
   out.w("<main class=\"main-container\"><div class=\"container wrapper\"><h1 class=\"title\">" +
-    marko_escapeXml(data.tipoQuarto.nomeTipoQuarto) +
+    marko_escapeXml(console.log(data)) +
     "</h1><p class=\"quarto__text\">" +
     marko_escapeXml(data.tipoQuarto.descricaoTipoQuarto) +
     ". <br> Todos eles custam R$" +
