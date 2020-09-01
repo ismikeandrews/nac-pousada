@@ -18,6 +18,10 @@
     border: none;
     background: transparent;
   }
+
+  button:hover {
+    cursor: pointer;
+}
   
   @media (min-width: 576px) {
     .container-contato {

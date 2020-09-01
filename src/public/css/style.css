@@ -388,6 +388,10 @@ button {
   background: transparent;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 @media (min-width: 576px) {
   .container-contato {
     padding: 90px 15px 88px 15px;
