@@ -12,7 +12,8 @@ const TipoQuartoController = require('./controller/TipoQuartoController');
 routes.get('/', HomeController.index)
 routes.get('/quartos', TipoQuartoController.index)
 routes.get('/quartos/:tipoQuarto', QuartoController.index)
-routes.get('/reservas', ReservaController.index)
+    // routes.get('/reservas', ReservaController.index)
+routes.get('/reserva/:id', ReservaController.newReserva)
 routes.get('/contatos', ContatoController.index)
 
 //DELETE

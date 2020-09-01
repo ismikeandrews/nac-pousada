@@ -1,0 +1,47 @@
+.nova__reserva {
+    .quarto {
+        &__image {
+            width: 50%;
+            margin: 0;
+        }
+        &__name {
+            font: 25px "Montserrat Regular", "sans-serif";
+            font-weight: 600;
+        }
+        &__reserva {
+            display: flex;
+            &--right {
+                padding: 20px 40px;
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
+    .reserva__nova {
+        .wrapper {
+            width: 60%;
+            @media (max-width: 1100px) {
+                width: 90%;
+            }
+        }
+    }
+    .desc__reserva {
+        flex-direction: column;
+        width: 100%;
+    }
+    hr {
+        margin: 20px 0;
+    }
+    .form {
+        &__title {
+            margin: 20px 0 40px;
+            display: block;
+            font: 25px "Montserrat Regular", "sans-serif";
+        }
+        &__reserva {
+            .btn {
+                margin: 0 auto;
+            }
+        }
+    }
+}

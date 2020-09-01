@@ -5,17 +5,37 @@ module.exports = {
 
     async index(request, response) {
         const reservas = await connection('tbReserva').select('*')
-        return response.status(200).json(reservas);
+            // return response.status(200).json(reservas);
 
         response.marko(
-            //  require('../views/reserva.marko')
-          )
+            require('../views/nova-reserva.marko', {
+                reservas: reservas
+            })
+        )
+    },
+
+    async newReserva(request, response) {
+        console.log('etste')
+        try {
+            const id = request.params.id
+            const quarto = await connection('tbQuarto').select('*').where('codQuarto', id)
+            response.marko(
+                require('../views/nova-reserva.marko', {
+                    quarto: quarto
+                })
+            )
+        } catch (e) {
+            console.error(e)
+            return response.status(500).send({
+                message: error
+            })
+        }
     },
 
     async create(request, response) {
         try {
             const { dataEntrada, dataSaida } = request.body;
-            await connection('tbReserva').insert({dataEntrada, dataSaida})
+            await connection('tbReserva').insert({ dataEntrada, dataSaida })
             return response.status(200).send({
                 message: 'Salvo com sucesso!'
             })

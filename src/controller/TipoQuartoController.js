@@ -5,9 +5,8 @@ module.exports = {
         try {
             const results = await connection('tbTipoQuarto').select('*')
             response.marko(
-                require('../views/quartos.marko'),
-                {
-                    tipos : results
+                require('../views/quartos.marko'), {
+                    tipos: results
                 }
             )
         } catch (error) {

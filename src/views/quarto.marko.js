@@ -41,7 +41,7 @@ function render(input, out, __component, component, state) {
       marko_escapeXmlAttr(quarto.imagemQuarto) +
       "\" alt=\"Quarto VIP\" title=\"Quarto VIP\" class=\"quarto__image-img quarto__image-img-detalhes\"></div><div class=\"quarto__informacoes\"><div class=\"quarto__text--title\">QUARTO " +
       marko_escapeXml(quarto.nomeQuarto) +
-      "</div><a href=\"reserve/" +
+      "</div><a href=\"/reserva/" +
       marko_escapeXmlAttr(quarto.codQuarto) +
       "\" class=\"quarto__btn quarto__btn_reserve\">RESERVE</a></div></div>");
   });
