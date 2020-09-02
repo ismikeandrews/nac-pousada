@@ -12,6 +12,7 @@ module.exports = {
     },
 
     async create(request, response) {
+        console.log(request.body)
         try {
             const { nomeCompletoContato, emailContato, mensagemContato, dataContato } = request.body;
             await connection('tbContato').insert({
