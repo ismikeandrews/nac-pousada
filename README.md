@@ -60,6 +60,17 @@ que será explicada a seguir.
 Nesta tela são exibidos os quartos disponíveis da categoria escolhida pelo usuário na tela anterior (vip ou apartamento). Aqui é onde
 o cliente pode escolher qual acomodação ele deseja reservar.
 
+### Tela de reservas
+![Reserva](src/public/assets/images/markdown/reserva.jpeg)
+Após clicar no botão de reserva o usuário será redirecionado para esta tela. Nela são exibidas todas as informações necessárias
+relacionadas ao quarto escolhido. O usuário pode realizar sua reserva selecionando as datas de entrada e saída, assim será exibido
+o preço final da estadia.
+
+### Tela de contato
+![Contato](src/public/assets/images/markdown/contato.jpeg)
+Esta é a tela de contato, ela servirá para que o usuário tire eventuais dúvidas que surgirem, assim a empresa poderá entrar em
+contato e ajudar o cliente.
+
 ## Integrantes
 - Cyntia Sayuri de Almeida - 
 - Fernando de Oliveira Laurino - 83825
