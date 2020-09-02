@@ -21,7 +21,7 @@ function render(input, out, __component, component, state) {
 
   component_globals_tag({}, out);
 
-  out.w("<nav class=\"menu\"><a href=\"/\"><img src=\"/assets/images/logo.png\" alt=\"Logo da Pousada\" title=\"Logo da Pousada\" class=\"menu__img\"></a><div class=\"menu__pages\"><div class=\"menu__item\"><a href=\"/\" class=\"menu__link\">Home</a></div><div class=\"menu__item\"><a href=\"/quartos\" class=\"menu__link\">Quartos</a></div><div class=\"menu__item\"><a href=\"/reservas\" class=\"menu__link\">Reservas</a></div><div class=\"menu__item\"><a href=\"/contatos\" class=\"menu__link\">Contato</a></div></div></nav><main class=\"main-container\"><div class=\"container wrapper\"><h1 class=\"title\">Nova Reserva</h1><section class=\"nova__reserva\"><div class=\"quarto__reserva\"><img src=\"/assets/images/" +
+  out.w("<nav class=\"menu\"><a href=\"/\"><img src=\"/assets/images/logo.png\" alt=\"Logo da Pousada\" title=\"Logo da Pousada\" class=\"menu__img\"></a><div class=\"menu__pages\"><div class=\"menu__item\"><a href=\"/\" class=\"menu__link\">Home</a></div><div class=\"menu__item\"><a href=\"/quartos\" class=\"menu__link\">Quartos</a></div><div class=\"menu__item\"><a href=\"/reservas\" class=\"menu__link active\">Reservas</a></div><div class=\"menu__item\"><a href=\"/contatos\" class=\"menu__link\">Contato</a></div></div></nav><main class=\"main-container\"><div class=\"container wrapper\"><h1 class=\"title\">Nova Reserva</h1><section class=\"nova__reserva\"><div class=\"quarto__reserva\"><img src=\"/assets/images/" +
     marko_escapeXmlAttr(data.nomeTipoQuarto) +
     "s/" +
     marko_escapeXmlAttr(data.imagemQuarto) +

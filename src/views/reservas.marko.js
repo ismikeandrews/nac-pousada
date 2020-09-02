@@ -2,7 +2,7 @@
 "use strict";
 
 var marko_template = module.exports = require("marko/src/html").t(__filename),
-    marko_componentType = "/nac-pousada$1.0.0/src/views/quarto.marko",
+    marko_componentType = "/nac-pousada$1.0.0/src/views/reservas.marko",
     components_helpers = require("marko/src/components/helpers"),
     marko_renderer = components_helpers.r,
     marko_defineComponent = components_helpers.c,
@@ -24,19 +24,15 @@ function render(input, out, __component, component, state) {
 
   out.w("<nav class=\"menu\"><div><img src=\"../assets/images/logo.png\" alt=\"Logo da Pousada\" title=\"Logo da Pousada\" class=\"menu__img\"></div><div class=\"menu__pages\"><div class=\"menu__item\"><a href=\"/\" class=\"menu__link\">Home</a></div><div class=\"menu__item\"><a href=\"/quartos\" class=\"menu__link active\">Quartos</a></div><div class=\"menu__item\"><a href=\"/quarto/all\" class=\"menu__link\">Reservas</a></div><div class=\"menu__item\"><a href=\"/contatos\" class=\"menu__link\">Contato</a></div></div></nav><main class=\"main-container\"><div class=\"container wrapper\"><h1 class=\"title\">" +
     marko_escapeXml(console.log(data)) +
-    "</h1><p class=\"quarto__text\">" +
-    marko_escapeXml(data.tipoQuarto.descricaoTipoQuarto) +
-    ". <br> Todos eles custam R$" +
-    marko_escapeXml(data.tipoQuarto.valorDiariaTipoQuarto) +
-    " a diária.</p><div class=\"quartos\">");
+    "</h1><p class=\"quarto__text\"></p><div class=\"quartos\">");
 
-  var for__24 = 0;
+  var for__23 = 0;
 
   marko_forEach(data.quartos, function(quarto) {
-    var keyscope__25 = "[" + ((for__24++) + "]");
+    var keyscope__24 = "[" + ((for__23++) + "]");
 
     out.w("<div class=\"quarto\"><div class=\"quarto__image\"><img src=\"/assets/images/" +
-      marko_escapeXmlAttr(data.tipoQuarto.nomeTipoQuarto) +
+      marko_escapeXmlAttr(quarto.nomeTipoQuarto) +
       "s/" +
       marko_escapeXmlAttr(quarto.imagemQuarto) +
       "\" alt=\"Quarto VIP\" title=\"Quarto VIP\" class=\"quarto__image-img quarto__image-img-detalhes\"></div><div class=\"quarto__informacoes\"><div class=\"quarto__text--title\">QUARTO " +
@@ -50,7 +46,7 @@ function render(input, out, __component, component, state) {
 
   init_components_tag({}, out);
 
-  await_reorderer_tag({}, out, __component, "56");
+  await_reorderer_tag({}, out, __component, "55");
 
   out.w("</body></html>");
 }
@@ -63,7 +59,7 @@ marko_template._ = marko_renderer(render, {
 marko_template.Component = marko_defineComponent({}, marko_template._);
 
 marko_template.meta = {
-    id: "/nac-pousada$1.0.0/src/views/quarto.marko",
+    id: "/nac-pousada$1.0.0/src/views/reservas.marko",
     tags: [
       "marko/src/components/taglib/component-globals-tag",
       "marko/src/components/taglib/init-components-tag",

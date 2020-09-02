@@ -13,23 +13,23 @@ module.exports = {
 
     async create(request, response) {
         console.log(request.body)
-        try {
-            const { nomeCompletoContato, emailContato, mensagemContato, dataContato } = request.body;
-            await connection('tbContato').insert({
-                nomeCompletoContato,
-                emailContato,
-                mensagemContato,
-                dataContato
-            })
-            return response.status(200).send({
-                message: 'Salvo com sucesso!'
-            })
-        } catch (error) {
-            console.log(error);
-            return response.status(500).send({
-                message: error
-            })
-        }
+        // try {
+        //     const { nomeCompletoContato, emailContato, mensagemContato, dataContato } = request.body;
+        //     await connection('tbContato').insert({
+        //         nomeCompletoContato,
+        //         emailContato,
+        //         mensagemContato,
+        //         dataContato
+        //     })
+        //     return response.status(200).send({
+        //         message: 'Salvo com sucesso!'
+        //     })
+        // } catch (error) {
+        //     console.log(error);
+        //     return response.status(500).send({
+        //         message: error
+        //     })
+        // }
 
     },
 

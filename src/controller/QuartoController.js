@@ -2,6 +2,25 @@ const connection = require('../database/connection');
 
 module.exports = {
 
+    async getAll(request, response){
+        try {
+            const results = await connection('tbQuarto')
+            .join('tbTipoQuarto', 'tbQuarto.codTipoQuarto', '=', 'tbTipoQuarto.codTipoQuarto')
+            .select("*")
+            console.log(results)
+            response.marko(
+                require('../views/reservas.marko'), {
+                    quartos: results
+                }
+            );
+        } catch (error) {
+            console.log(error);
+            return response.status(500).send({
+                message: error
+            });
+        }
+    },
+
     async index(request, response) {
         try {
             const tipoQuarto = request.params.tipoQuarto

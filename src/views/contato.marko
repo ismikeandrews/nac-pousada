@@ -25,7 +25,7 @@
                 </a>
             </div>
             <div class="menu__item">
-                <a href="/reservas" class="menu__link">
+                <a href="/quarto/all" class="menu__link">
                     Reservas
                 </a>
             </div>
@@ -44,12 +44,12 @@
                         style="will-change: transform; transform: perspective(300px) rotateX(0deg) rotateY(0deg);">
                         <img src="assets/images/img-msg_azul.png" alt="Envie uma Mensagem!">
                     </div>
-                    <form class="form-contato">
-                        <h2 class="form-title">Nos mande uma mensagem!</h2>
+                    <form action="/contato/create" method="POST" class="form-contato">
+                        <h2 class="form-title">Tire suas dúvidas</h2>
                         <div class="form-group">
-                            <input class="form-input" id="nameId" type="text" name="name" placeholder="Nome:">
-                            <input class="form-input" id="emailId" type="email" name="email" placeholder="Seu email:">
-                            <textarea class="form-input" name="message" placeholder="Escreva sua dúvida ou sugestão:" />
+                            <input class="form-input" id="nameId" type="text" name="nomeCompletoContato" placeholder="Nome:">
+                            <input class="form-input" id="emailId" type="email" name="emailContato" placeholder="Seu email:">
+                            <textarea class="form-input" name="mensagemContato" placeholder="Escreva sua dúvida ou sugestão:" />
                             <div class="form-btn">
                             <button class="btn" onclick="formValidate(event)">Enviar
                                  <span>
@@ -91,7 +91,6 @@
         </a>
     </div>
 </div>
-<script type="text/javascript" src="/js/custom.js"></script>
 <script type="text/javascript" src="/js/vanilla-tilt.js"></script>
 </body>
 </html>

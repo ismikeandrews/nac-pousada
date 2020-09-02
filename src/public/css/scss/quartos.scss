@@ -11,6 +11,7 @@
 }
 
 .quarto {
+    margin-bottom: 130px;
     position: relative;
     width: 47%;
 
@@ -51,14 +52,14 @@
         cursor: pointer;
         font: 16px $font-bold;
         margin-top: 10px;
-        padding: 5px;
+        padding: 10px;
         position: absolute;
         right: 0;
         text-align: center;
         text-decoration: none;
         text-transform: uppercase;
         transition: all .5s ease-in-out;
-        width: 110px;
+        width: 200px;
 
         &:hover {
             background: $white;

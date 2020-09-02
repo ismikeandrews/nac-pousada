@@ -8,14 +8,18 @@
 }
 
 .quarto {
-  margin-bottom: 45px;
+  margin-bottom: 70px;
+
+  &--main {
+    margin-bottom: 130px;
+  }
 
   &__image-img-detalhes {
     max-height: 200px;
   }
 
   &__btn_reserve {
-    margin-top: 0;
+    margin-top: 40px;
   }
 
   &__informacoes {
