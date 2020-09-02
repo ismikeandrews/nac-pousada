@@ -4,6 +4,7 @@
         <meta charset='utf-8' />
         <title>Pousada</title>
         <link rel="stylesheet" href="/css/style.css">
+        $ let finalValue = 0;
     </head>
     <body>
         <nav class="menu">
@@ -86,7 +87,13 @@
                                     <input.form-input id="dataEntrada" type="date" name="dataEntrada" placeholder="Data de entrada">
                                     <label.form-label for="dataSaida">Data de Saída</label>
                                     <input.form-input type="date" id="dataSaida" name="dataSaida" placeholder="Data de saída">
-                                    <button.btn type="submit">Reservar</button>
+                                    <input.d-none id="valorReserva" name="valorReserva">
+                                    <button.btn type="button" onClick="calulateValue(dataEntrada.value, dataSaida.value, ${data.valorDiariaTipoQuarto})">Calcular Preço</button>
+                                    <div.js-content.d-none>
+                                        <span.form-label>Confirma a reserva no valor de R$ <span.finalValue></span> ?</span>
+                                        <button.btn type="submit">Reservar</button>
+                                    </div>
+                                  
                                 </div>
                             </form>
                         </div>
@@ -122,5 +129,6 @@
             </a>
         </div>
     </div>
+    <script type="text/javascript" src="/js/custom.js"></script>
     </body>
 </html>
