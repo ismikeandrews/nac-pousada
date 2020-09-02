@@ -1,4 +1,5 @@
 const connection = require('../database/connection');
+const  Joi = require('Joi')
 
 module.exports = {
 
@@ -12,6 +13,12 @@ module.exports = {
     },
 
     async create(request, response) {
+        const blueprint = Joi.object().keys({
+            nomeCompletoContato: Joi.string().required(),
+            emailContato: Joi.string().trim().email().required(),
+            mensagemContato: Joi.string().required()
+         })
+         console.log(blueprint)
         console.log(request.body)
         // try {
         //     const { nomeCompletoContato, emailContato, mensagemContato, dataContato } = request.body;
