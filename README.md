@@ -45,7 +45,7 @@ npm run db:seed
 ## Uso
 
 ### Tela principal - Home
-![Home](src/public/assets/images/markdown/home.jpeg)
+![Home](src/public/assets/images/markdown/home.jpeg?raw=true)
 Ao entrar no site o usuário verá a tela a principal da Pousada Elegance, nela são exibidas informações básicas como localização,
 benefícios e uma breve descrição. Também são exibidas imagens para que as pessoas vejam e conheçam melhor a pousada.
 
