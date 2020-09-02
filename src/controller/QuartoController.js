@@ -7,7 +7,6 @@ module.exports = {
             const results = await connection('tbQuarto')
             .join('tbTipoQuarto', 'tbQuarto.codTipoQuarto', '=', 'tbTipoQuarto.codTipoQuarto')
             .select("*")
-            console.log(results)
             response.marko(
                 require('../views/reservas.marko'), {
                     quartos: results

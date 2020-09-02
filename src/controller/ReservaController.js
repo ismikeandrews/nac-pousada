@@ -38,20 +38,11 @@ module.exports = {
 
     async create(request, response) {
         try {
-
-            // const dataDeEntrada = new Date(request.body.dataEntrada)
-            // const dataDeSaida = new Date(request.body.dataSaida)
-            // console.log('data de entrada:', dataDeEntrada)
-            // console.log('data de saiad:', dataDeSaida)
-            // let qtdDias = (dataDeSaida - dataDeEntrada) / 86400000
-
-            // console.log('o cara vai ficar', qtdDias, 'dias')
-            console.log(request.body)
-            const { dataEntrada, dataSaida } = request.body;
-            // await connection('tbReserva').insert({ dataEntrada, dataSaida, valorReserva })
-            // return response.status(200).send({
-            //     message: 'Salvo com sucesso!'
-            // })
+            const { nomeCompleto, dataEntrada, dataSaida, valorReserva } = request.body;
+            await connection('tbReserva').insert({ nomeCompleto, dataEntrada, dataSaida, valorReserva })
+            return response.status(200).send({
+                message: 'Salvo com sucesso!'
+            })
         } catch (error) {
             console.log(error);
             return response.status(500).send({

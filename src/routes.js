@@ -18,10 +18,10 @@ routes.get('/quartos/:tipoQuarto', QuartoController.index)
 routes.get('/quarto/all', QuartoController.getAll)
 routes.get('/reserva/:id', ReservaController.newReserva)
 routes.get('/contatos', ContatoController.index)
+routes.get('/reserva/delete/:id', ReservaController.delete)
 
 //DELETE
 routes.delete('/quartos/delete/:id', QuartoController.delete)
-routes.delete('/reserva/delete/:id', ReservaController.delete)
 routes.delete('/contato/delete/:id', ContatoController.delete)
 
 //POST

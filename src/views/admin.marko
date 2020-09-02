@@ -43,34 +43,14 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr for (reserva in data.reservas)>
                                 <th scope="row">99</th>
-                                <td>Mike PentaKayle</td>
-                                <td>12/01/10</td>
-                                <td>13/01/10</td>
-                                <td>R$ 1000</td>
+                                <td>${reserva.nomeCompleto}</td>
+                                <td>${reserva.dataEntrada}</td>
+                                <td>${reserva.dataSaida}</td>
+                                <td>R$ ${reserva.valorReserva}</td>
                                 <td>
-                                    <button class="btn">Cancelar</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Luis AxT Neto</td>
-                                <td>12/01/10</td>
-                                <td>13/01/10</td>
-                                <td>R$ 1000</td>
-                                <td>
-                                    <button class="btn">Cancelar</button>
-                                </td>
-                            </tr>
-                            <tr>
-                            <th scope="row">10</th>
-                                <td>Cynthia K/DA Edição Prestigio</td>
-                                <td>12/01/10</td>
-                                <td>13/01/10</td>
-                                <td>R$ 1000</td>
-                                <td>
-                                    <button class="btn">Cancelar</button>
+                                    <a class="btn" data-method="delete" href="/reserva/delete/${reserva.codReserva}">Cancelar</a>
                                 </td>
                             </tr>
                         </tbody>
