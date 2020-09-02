@@ -69,7 +69,7 @@ relacionadas ao quarto escolhido. O usuário pode realizar sua reserva seleciona
 o preço final da estadia.
 
 ### Tela de dashboard admin
-![Contato](src/public/assets/images/markdown/admin.jpeg)
+![Contato](src/public/assets/images/markdown/admin.png)
 Nessa página um admin pode ter acesso as reservas que foram feitas e cancelar qualquer uma delas se desejar. Para acessar basta acessar o link: <http://localhost:3333/admin> 
 
 
