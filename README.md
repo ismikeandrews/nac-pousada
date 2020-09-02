@@ -18,13 +18,9 @@ Agora, crie um banco de dados e configure ele no arquivo knexfile.js, na raiz do
 
 ```js
 development: {
-   client: 'mysql',
+   client: 'sqlite3',
    connection: {
-     port: "3306",
-     host: "127.0.0.1",
-     database: "pousada",
-     user: "root",
-     password: "123",
+     filename: './src/database/db.sqlite',
    }
 },
 ```
