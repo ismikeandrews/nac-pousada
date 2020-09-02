@@ -1,6 +1,7 @@
 const express = require('express');
 const routes = express.Router();
 
+const AdminController = require('./controller/AdminController');
 const HomeController = require('./controller/HomeController')
 const QuartoController = require('./controller/QuartoController')
 const ReservaController = require('./controller/ReservaController');
@@ -8,8 +9,10 @@ const ContatoController = require('./controller/ContatoController');
 const TipoQuartoController = require('./controller/TipoQuartoController');
 
 
+
 //GET
 routes.get('/', HomeController.index)
+routes.get('/admin', AdminController.index)
 routes.get('/quartos', TipoQuartoController.index)
 routes.get('/quartos/:tipoQuarto', QuartoController.index)
 routes.get('/reserva/:id', ReservaController.newReserva)
