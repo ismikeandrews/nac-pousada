@@ -143,8 +143,12 @@ dist
 !.vscode/extensions.json
 *.code-workspace
 
+
+
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
 .history
 
 .idea
+
+.sass-cache/
