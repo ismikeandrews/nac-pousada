@@ -676,6 +676,10 @@ textarea.form-input {
   display: block;
 }
 
+.d-none {
+  display: none;
+}
+
 .container-contato {
   padding: 40px 30px 50px 30px;
 }
