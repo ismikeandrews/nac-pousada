@@ -9,9 +9,9 @@ var marko_template = module.exports = require("marko/src/html").t(__filename),
     marko_helpers = require("marko/src/runtime/html/helpers"),
     marko_loadTag = marko_helpers.t,
     component_globals_tag = marko_loadTag(require("marko/src/components/taglib/component-globals-tag")),
-    marko_escapeXml = marko_helpers.x,
     marko_forEach = marko_helpers.f,
     marko_escapeXmlAttr = marko_helpers.xa,
+    marko_escapeXml = marko_helpers.x,
     init_components_tag = marko_loadTag(require("marko/src/components/taglib/init-components-tag")),
     await_reorderer_tag = marko_loadTag(require("marko/src/taglibs/async/await-reorderer-tag"));
 
@@ -22,9 +22,7 @@ function render(input, out, __component, component, state) {
 
   component_globals_tag({}, out);
 
-  out.w("<nav class=\"menu\"><div><img src=\"../assets/images/logo.png\" alt=\"Logo da Pousada\" title=\"Logo da Pousada\" class=\"menu__img\"></div><div class=\"menu__pages\"><div class=\"menu__item\"><a href=\"/\" class=\"menu__link\">Home</a></div><div class=\"menu__item\"><a href=\"/quartos\" class=\"menu__link\">Quartos</a></div><div class=\"menu__item\"><a href=\"/quarto/all\" class=\"menu__link active\">Reservas</a></div><div class=\"menu__item\"><a href=\"/contatos\" class=\"menu__link\">Contato</a></div></div></nav><main class=\"main-container\"><div class=\"container wrapper\"><h1 class=\"title\">" +
-    marko_escapeXml(console.log(data)) +
-    "</h1><p class=\"quarto__text\"></p><div class=\"quartos\">");
+  out.w("<nav class=\"menu\"><div><img src=\"../assets/images/logo.png\" alt=\"Logo da Pousada\" title=\"Logo da Pousada\" class=\"menu__img\"></div><div class=\"menu__pages\"><div class=\"menu__item\"><a href=\"/\" class=\"menu__link\">Home</a></div><div class=\"menu__item\"><a href=\"/quartos\" class=\"menu__link\">Quartos</a></div><div class=\"menu__item\"><a href=\"/quarto/all\" class=\"menu__link active\">Reservas</a></div><div class=\"menu__item\"><a href=\"/contatos\" class=\"menu__link\">Contato</a></div></div></nav><main class=\"main-container\"><div class=\"container wrapper\"><h1 class=\"title\">Reservas</h1><p class=\"quarto__text\"></p><div class=\"quartos\">");
 
   var for__23 = 0;
 

@@ -19,7 +19,6 @@ module.exports = {
             const id = request.params.id
             const quarto = await connection('tbQuarto').select('*').where('codQuarto', id)
                 .join('tbTipoQuarto', 'tbQuarto.codTipoQuarto', '=', 'tbTipoQuarto.codTipoQuarto').first()
-            console.log(quarto)
             response.marko(
                 require('../views/nova-reserva.marko'), {
                     nomeQuarto: quarto.nomeQuarto,
