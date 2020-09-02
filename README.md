@@ -44,6 +44,8 @@ npm run db:seed
 
 ## Uso
 
+Para entrar no site, basta abrir seu navegador na url http://localhost:3333/
+
 ### Tela principal - Home
 ![Home](src/public/assets/images/markdown/home.jpeg?raw=true)
 Ao entrar no site o usuário verá a tela a principal da Pousada Elegance, nela são exibidas informações básicas como localização,
@@ -72,8 +74,8 @@ Esta é a tela de contato, ela servirá para que o usuário tire eventuais dúvi
 contato e ajudar o cliente.
 
 ## Integrantes
-- Cyntia Sayuri de Almeida - 
-- Fernando de Oliveira Laurino - 83825
+- Cyntia Sayuri de Almeida - rm82273
+- Fernando de Oliveira Laurino - rm83825
 - Luis Guilherme Bíspo - rm80389
 - Michael Andrews Contrera Liu - rm82443
 - Vanessa Amaral Marques - rm83690
