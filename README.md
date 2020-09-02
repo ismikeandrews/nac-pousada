@@ -68,10 +68,11 @@ Após clicar no botão de reserva o usuário será redirecionado para esta tela.
 relacionadas ao quarto escolhido. O usuário pode realizar sua reserva selecionando as datas de entrada e saída, assim será exibido
 o preço final da estadia.
 
-### Tela de contato
-![Contato](src/public/assets/images/markdown/contato.jpeg)
-Esta é a tela de contato, ela servirá para que o usuário tire eventuais dúvidas que surgirem, assim a empresa poderá entrar em
-contato e ajudar o cliente.
+### Tela de dashboard admin
+![Contato](src/public/assets/images/markdown/admin.jpeg)
+Nessa página um admin pode ter acesso as reservas que foram feitas e cancelar qualquer uma delas se desejar. Para acessar basta acessar o link: <http://localhost:3333/admin> 
+
+
 
 ## Integrantes
 - Cyntia Sayuri de Almeida - rm82273
